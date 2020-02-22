@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "[*] Setup gitignore_global"
+git config --global core.excludesfile ~/.gitignore_global
+
 echo "[*] Installing Zsh..."
 sudo apt-get install -y zsh
 
