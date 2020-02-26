@@ -3,12 +3,6 @@
 echo "[*] Setup gitignore_global"
 git config --global core.excludesfile ~/.gitignore_global
 
-echo "[*] Installing Zsh..."
-sudo apt-get install -y zsh
-
-echo "[*] Installing Oh-My-Zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 echo "[*] Installing Homebrew..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
