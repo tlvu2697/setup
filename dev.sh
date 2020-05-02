@@ -10,6 +10,11 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "[*] Installing gcc..."
 brew install gcc
 
+echo "[*] Installing Frontend-Core dependencies"
+brew install cairo
+brew install pango
+sudo apt install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
+
 echo "[*] Installing hub"
 brew install hub
 
