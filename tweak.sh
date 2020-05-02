@@ -14,3 +14,6 @@ sudo sysctl vm.swappiness=10
 
 echo "[*] Increase max_user_watches (https://github.com/google/cadvisor/issues/1581)"
 sudo sysctl fs.inotify.max_user_watches=1048576
+
+echo "[*] Deel sleep (https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close)"
+echo deep | sudo tee /sys/power/mem_sleep
