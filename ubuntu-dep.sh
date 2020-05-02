@@ -5,7 +5,10 @@ sudo apt-get install -y gnome-tweaks gnome-panel ppa-purge xclip ctags file make
 ssh-keygen -t rsa -b 4096 -C "tlvu2697@gmail.com"
 
 echo "[*] Installing ibus..."
-sudo add-apt-repository -y ppa:ubuntu-vn/ppa
+sudo apt install ibus
+im-config -n ibus
+sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt-get update
-sudo apt-get install -y ibus-unikey
+sudo apt-get install ibus-bamboo
 ibus restart
+echo "Please logout and login again"
