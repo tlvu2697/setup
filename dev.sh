@@ -7,9 +7,6 @@ echo "[*] Installing Homebrew..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 
-echo "[*] Installing gcc..."
-brew install gcc
-
 echo "[*] Installing hub"
 brew install hub
 
