@@ -10,11 +10,6 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "[*] Installing gcc..."
 brew install gcc
 
-echo "[*] Installing Frontend-Core dependencies"
-brew install cairo
-brew install pango
-sudo apt install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
-
 echo "[*] Installing hub"
 brew install hub
 
@@ -29,8 +24,8 @@ brew install twpayne/taps/chezmoi
 echo "[*] Install Nodejs..."
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs 13.14.0
-asdf global nodejs 13.14.0
+asdf install nodejs 12.16.3
+asdf global nodejs 12.16.3
 
 echo "[*] Install Python..."
 asdf plugin-add python
