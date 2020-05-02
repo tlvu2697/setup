@@ -6,9 +6,6 @@ sudo apt-get install -y gnome-tweaks gnome-panel ppa-purge xclip ctags file make
 echo "[*] Init SSH key"
 ssh-keygen -t rsa -b 4096 -C "tlvu2697@gmail.com"
 
-echo "[*] Update persmission on /usr/local/bin"
-sudo chown -R $(whoami) /usr/local/bin
-
 echo "[*] Installing ibus..."
 sudo apt install ibus
 im-config -n ibus
