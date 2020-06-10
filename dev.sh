@@ -24,7 +24,7 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs 12.16.3
 asdf global nodejs 12.16.3
 
-echo "[*] Install Python..."
+echo "[*] Installing Python..."
 asdf plugin-add python
 asdf install python 2.7.13
 asdf install python 3.6.2
@@ -38,8 +38,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 pip install neovim
 pip3 install neovim
 
-echo "[*] Installing Tmux..."
-sudo apt-get install -y tmux
+echo "[*] Installing Ruby..."
+asdf plugin-add ruby
+asdf install ruby 2.7.1
+asdf global ruby 2.7.1
 
 echo "[*] Installing Tmuxinator..."
-brew install tmuxinator
+gem install tmuxinator
+sudo ln -s /home/tlvu/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
