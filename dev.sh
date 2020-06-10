@@ -32,16 +32,18 @@ asdf global python 3.6.2 2.7.13
 sudo ln -s /home/tlvu/.asdf/shims/python3 /usr/local/bin/python3
 sudo ln -s /home/tlvu/.asdf/shims/python2 /usr/local/bin/python2.7
 
-echo "[*] Installing Neovim..."
-sudo apt-get install -y neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-pip install neovim
-pip3 install neovim
-
 echo "[*] Installing Ruby..."
 asdf plugin-add ruby
 asdf install ruby 2.7.1
 asdf global ruby 2.7.1
+
+echo "[*] Installing Neovim..."
+sudo apt-get install -y neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+pip2 install neovim
+pip3 install neovim
+npm install -g neovim
+gem install neovim
 
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
