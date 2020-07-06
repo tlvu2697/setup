@@ -16,7 +16,7 @@ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
 echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
 
 echo "[*] Installing Chezmoi..."
-brew install twpayne/taps/chezmoi
+brew install chezmoi
 chezmoi init git@github.com:tlvu2697/dotfiles.git
 
 echo "[*] Install Nodejs..."
