@@ -17,6 +17,7 @@ echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
 
 echo "[*] Installing Chezmoi..."
 brew install twpayne/taps/chezmoi
+chezmoi init https://github.com/tlvu2697/dotfiles.git
 
 echo "[*] Install Nodejs..."
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
