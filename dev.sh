@@ -30,8 +30,8 @@ asdf plugin-add python
 asdf install python 2.7.13
 asdf install python 3.6.2
 asdf global python 3.6.2 2.7.13
-sudo ln -s /home/tlvu/.asdf/shims/python3 /usr/local/bin/python3
-sudo ln -s /home/tlvu/.asdf/shims/python2 /usr/local/bin/python2.7
+sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/python3
+sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/python2.7
 
 echo "[*] Installing Ruby..."
 asdf plugin-add ruby
@@ -48,4 +48,4 @@ gem install neovim
 
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
-sudo ln -s /home/tlvu/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
+sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
