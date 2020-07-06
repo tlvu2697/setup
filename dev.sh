@@ -5,7 +5,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 echo "[*] Installing Homebrew..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >> ~/.bash_profile
 
 echo "[*] Installing hub"
 brew install hub
