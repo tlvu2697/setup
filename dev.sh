@@ -30,7 +30,7 @@ asdf plugin-add python
 asdf install python 2.7.13
 asdf install python 3.6.2
 asdf global python 3.6.2 2.7.13
-sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/python3
+sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/python3.6
 sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/python2.7
 
 echo "[*] Installing Ruby..."
