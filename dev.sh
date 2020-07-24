@@ -47,6 +47,5 @@ sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
 pip install pyqt5
-sudo ln -s /home/tlvu/.asdf/shims/python3 /usr/local/bin/python3
 sudo ln -s ~/.git-cola/bin/git-dag /usr/local/bin/git-dag
 sudo ln -s ~/.git-cola/bin/git-cola /usr/local/bin/git-cola
