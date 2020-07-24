@@ -3,20 +3,14 @@
 echo "[*] Setup gitignore_global"
 git config --global core.excludesfile ~/.gitignore_global
 
-echo "[*] Installing Homebrew..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >> ~/.bash_profile
-
 echo "[*] Installing hub"
-brew install hub
+sudo snap install hub --classic
 
 echo "[*] Installing ASDF..."
-brew install asdf
-echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 echo "[*] Installing Chezmoi..."
-brew install chezmoi
+sudo snap install chezmoi --classic
 chezmoi init git@github.com:tlvu2697/dotfiles.git
 
 echo "[*] Install Nodejs..."
