@@ -44,6 +44,10 @@ echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
 sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
 
+echo "[*] Installing Solargraph..."
+gem install solargraph
+sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/solargraph /usr/local/bin/_solargraph
+
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
 pip install pyqt5
