@@ -16,8 +16,8 @@ chezmoi init git@github.com:tlvu2697/dotfiles.git
 echo "[*] Install Nodejs..."
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs 12.16.3
-asdf global nodejs 12.16.3
+asdf install nodejs 12.18.3
+asdf global nodejs 12.18.3
 
 echo "[*] Installing Python..."
 asdf plugin-add python
