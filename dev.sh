@@ -24,13 +24,15 @@ asdf plugin-add python
 asdf install python 2.7.13
 asdf install python 3.6.2
 asdf global python 3.6.2 2.7.13
-sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/python3.6
-sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/python2.7
+sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3.6
+sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
 
 echo "[*] Installing Ruby..."
 asdf plugin-add ruby
 asdf install ruby 2.7.1
 asdf global ruby 2.7.1
+sudo ln -s ~/.asdf/shims/ruby /usr/local/bin/_ruby
+
 
 echo "[*] Installing Neovim..."
 sudo apt-get install -y neovim
@@ -43,10 +45,6 @@ gem install neovim
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
 sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
-
-echo "[*] Installing Solargraph..."
-gem install solargraph
-sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/solargraph /usr/local/bin/_solargraph
 
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
