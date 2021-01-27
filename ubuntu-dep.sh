@@ -7,10 +7,10 @@ echo "[*] Init SSH key"
 ssh-keygen -t rsa -b 4096 -C "tlvu2697@gmail.com"
 
 echo "[*] Installing ibus..."
-sudo apt install ibus
-im-config -n ibus
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt-get update
 sudo apt-get install ibus-bamboo
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
+
 ibus restart
 echo "Please logout and login again"
