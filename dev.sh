@@ -31,6 +31,7 @@ echo "[*] Installing Ruby..."
 asdf plugin-add ruby
 asdf install ruby 2.7.1
 asdf global ruby 2.7.1
+sudo ln -s ~/.asdf/shims/ruby /usr/local/bin/_ruby
 
 echo "[*] Installing Neovim..."
 sudo apt-get install -y neovim
