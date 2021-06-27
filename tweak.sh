@@ -20,3 +20,9 @@ sudo sysctl fs.inotify.max_user_watches=1048576
 
 echo "[*] Deep sleep (https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close)"
 echo deep | sudo tee /sys/power/mem_sleep
+
+echo "[*] Change battery levels' thresholds (https://askubuntu.com/questions/92794/how-to-change-critically-low-battery-value)"
+gsettings set org.gnome.settings-daemon.plugins.power percentage-action 15
+gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 20
+gsettings set org.gnome.settings-daemon.plugins.power percentage-low 30
+gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false
