@@ -1,17 +1,23 @@
 #!/bin/bash
 
-echo "[*] Setup gitignore_global"
+echo "[*] Cloning dotfiles"
+cd ~/workspace/tlvu2697
+git clone git@github.com:tlvu2697/dotfiles.git
+bash link.sh
+
+echo "[*] Cloning nvim config"
+cd ~/workspace/tlvu2697
+git clone git@github.com:tlvu2697/nvim.git
+bash link.sh
+
+echo "[*] Setup gitignore_global..."
 git config --global core.excludesfile ~/.gitignore_global
 
-echo "[*] Installing hub"
+echo "[*] Installing hub..."
 sudo snap install hub --classic
 
 echo "[*] Installing ASDF..."
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-
-echo "[*] Installing Chezmoi..."
-sudo snap install chezmoi --classic
-chezmoi init git@github.com:tlvu2697/dotfiles.git
 
 echo "[*] Install Nodejs..."
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
