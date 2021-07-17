@@ -40,7 +40,7 @@ asdf global ruby 2.7.1
 
 echo "[*] Installing Neovim..."
 sudo apt-get install -y neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 pip2 install neovim
 pip3 install neovim
 npm install -g neovim
