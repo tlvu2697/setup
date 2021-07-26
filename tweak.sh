@@ -12,11 +12,13 @@ sudo swapon /swapfile
 grep SwapTotal /proc/meminfo
 
 echo "[*] Tweak swap settings (https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04#tweak-your-swap-settings)"
-sudo sysctl vm.vfs_cache_pressure=50
-sudo sysctl vm.swappiness=10
+sudo sh -c "echo vm.vfs_cache_pressure=50 >> /etc/sysctl.conf"
+sudo sh -c "echo vm.swappiness=10 >> /etc/sysctl.conf"
+sudo sysctl -p
 
-echo "[*] Increase max_user_watches (https://github.com/google/cadvisor/issues/1581)"
-sudo sysctl fs.inotify.max_user_watches=1048576
+echo "[*] Increase max_user_watches (https://github.com/guard/listen/blob/master/README.md#increasing-the-amount-of-inotify-watchers)"
+sudo sh -c "echo fs.inotify.max_user_watches=1048576 >> /etc/sysctl.conf"
+sudo sysctl -p
 
 echo "[*] Deep sleep (https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close)"
 echo deep | sudo tee /sys/power/mem_sleep
