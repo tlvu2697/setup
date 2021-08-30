@@ -35,8 +35,8 @@ sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
 
 echo "[*] Installing Ruby..."
 asdf plugin-add ruby
-asdf install ruby 2.7.1
-asdf global ruby 2.7.1
+asdf install ruby 3.0.2
+asdf global ruby 3.0.2
 
 echo "[*] Installing Neovim..."
 sudo apt-get install -y neovim
@@ -49,7 +49,7 @@ ln -s ~/.asdf/shims/neovim-ruby-host /usr/local/bin/_neovim-ruby-host
 
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
-sudo ln -s ~/.asdf/installs/ruby/2.7.1/bin/tmuxinator /usr/local/bin/muxinator
+sudo ln -s ~/.asdf/installs/ruby/3.0.2/bin/tmuxinator /usr/local/bin/muxinator
 
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
