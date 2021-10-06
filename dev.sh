@@ -14,7 +14,7 @@ echo "[*] Setup gitignore_global..."
 git config --global core.excludesfile ~/.gitignore_global
 
 echo "[*] Installing hub..."
-sudo snap install hub --classic
+sudo apt install hub
 
 echo "[*] Installing ASDF..."
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
