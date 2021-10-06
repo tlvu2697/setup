@@ -2,7 +2,7 @@
 
 echo "[*] Installing Zsh..."
 sudo apt-get install -y zsh
-chsh -s /bin/zsh
+sudo chsh -s $(which zsh)
 
 echo "[*] Installing zinit..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
