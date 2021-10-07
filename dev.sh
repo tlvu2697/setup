@@ -28,9 +28,9 @@ asdf install nodejs 14.18.0
 asdf global nodejs 14.18.0
 
 echo "[*] Installing Python..."
-asdf install python 2.7.13
-asdf install python 3.6.2
-asdf global python 3.6.2 2.7.13
+asdf install python 2.7.18
+asdf install python 3.6.15
+asdf global python 3.6.15 2.7.18
 sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3.6
 sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
 
