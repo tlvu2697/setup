@@ -2,7 +2,7 @@
 
 echo "[*] Installing system utils..."
 sudo apt-get install -y gnome-tweaks gnome-panel ppa-purge xclip ctags file make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git font-manager ripgrep
-sudo apt install -y gnome-tweaks xclip ctags build-essential wget curl git font-manager
+sudo apt install -y gnome-tweaks xclip ctags build-essential wget curl git font-manager silversearcher-ag
 
 echo "[*] Init SSH key"
 ssh-keygen -t rsa -b 4096 -C "tlvu2697@gmail.com"
