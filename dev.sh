@@ -56,6 +56,9 @@ sudo add-apt-repository ppa:lazygit-team/release
 sudo apt-get update
 sudo apt-get install lazygit
 
+echo "[*] Installing LazyDocker..."
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
 pip install pyqt5
