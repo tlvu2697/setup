@@ -18,15 +18,16 @@ sudo apt install hub
 
 echo "[*] Installing ASDF..."
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-
-echo "[*] Install Nodejs..."
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs 12.18.3
-asdf global nodejs 12.18.3
+asdf plugin-add python
+asdf plugin-add ruby
+
+echo "[*] Install Nodejs..."
+asdf install nodejs 14.18.3
+asdf global nodejs 14.18.3
 
 echo "[*] Installing Python..."
-asdf plugin-add python
 asdf install python 2.7.13
 asdf install python 3.6.2
 asdf global python 3.6.2 2.7.13
@@ -34,7 +35,6 @@ sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3.6
 sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
 
 echo "[*] Installing Ruby..."
-asdf plugin-add ruby
 asdf install ruby 3.0.2
 asdf global ruby 3.0.2
 
