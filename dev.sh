@@ -51,6 +51,11 @@ echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
 sudo ln -s ~/.asdf/installs/ruby/3.0.2/bin/tmuxinator /usr/local/bin/muxinator
 
+echo "[*] Installing LazyGit..."
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt-get update
+sudo apt-get install lazygit
+
 echo "[*] Installing Git Cola"
 git clone git://github.com/git-cola/git-cola.git ~/.git-cola
 pip install pyqt5
