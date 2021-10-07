@@ -24,8 +24,8 @@ asdf plugin-add python
 asdf plugin-add ruby
 
 echo "[*] Install Nodejs..."
-asdf install nodejs 14.18.3
-asdf global nodejs 14.18.3
+asdf install nodejs 14.18.0
+asdf global nodejs 14.18.0
 
 echo "[*] Installing Python..."
 asdf install python 2.7.13
