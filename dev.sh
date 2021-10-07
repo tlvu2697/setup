@@ -45,7 +45,7 @@ pip2 install neovim
 pip3 install neovim
 npm install -g neovim
 gem install neovim
-ln -s ~/.asdf/shims/neovim-ruby-host /usr/local/bin/_neovim-ruby-host
+sudo ln -s ~/.asdf/shims/neovim-ruby-host /usr/local/bin/_neovim-ruby-host
 
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
