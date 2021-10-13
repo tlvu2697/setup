@@ -1,9 +1,3 @@
-echo "[*] Update persmission on /usr/local/bin"
-sudo chown -R $(whoami) /usr/local/bin
-
-echo "[*] Update persmission on /var/log"
-sudo chown -R $(whoami) /var/log
-
 echo "[*] Change swap size to 32GB (https://bogdancornianu.com/change-swap-size-in-ubuntu/)"
 sudo swapoff -a
 sudo dd if=/dev/zero of=/swapfile bs=1G count=32
