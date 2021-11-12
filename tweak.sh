@@ -22,3 +22,10 @@ gsettings set org.gnome.settings-daemon.plugins.power percentage-action 15
 gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 20
 gsettings set org.gnome.settings-daemon.plugins.power percentage-low 30
 gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false
+
+
+echo "[*] Stress test tools"
+sudo apt install stress
+sudo apt install hashcat
+git clone https://github.com/wilicc/gpu-burn "$HOME/.gpu-burn"
+sudo ln -s ~/.gpu-burn/gpu_burn /usr/local/bin/gpu-burn
