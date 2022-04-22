@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "[*] Installing Zsh..."
 sudo apt-get install -y zsh

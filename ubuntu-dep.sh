@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update
+
 echo "[*] Installing system utils..."
 sudo apt install -y gnome-tweaks xclip exuberant-ctags build-essential wget curl git font-manager ripgrep tmux mlocate imwheel
 
@@ -19,7 +21,6 @@ echo "[*] Installing ibus..."
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt-get update
 sudo apt-get install ibus-bamboo
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
-
+env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 ibus restart
 echo "Please logout and login again"

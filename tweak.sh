@@ -23,7 +23,6 @@ gsettings set org.gnome.settings-daemon.plugins.power percentage-critical 20
 gsettings set org.gnome.settings-daemon.plugins.power percentage-low 30
 gsettings set org.gnome.settings-daemon.plugins.power use-time-for-policy false
 
-
 echo "[*] Stress test tools"
 sudo apt install stress
 sudo apt install hashcat

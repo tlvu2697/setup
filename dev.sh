@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "[*] Cloning dotfiles"
 cd ~/workspace/tlvu2697
@@ -64,3 +64,12 @@ git clone git://github.com/git-cola/git-cola.git ~/.git-cola
 pip install pyqt5
 sudo ln -s ~/.git-cola/bin/git-dag /usr/local/bin/git-dag
 sudo ln -s ~/.git-cola/bin/git-cola /usr/local/bin/git-cola
+
+echo "[*] Redis Installation"
+echo "https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04"
+
+echo "[*] PostgresSQL Installation"
+echo "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04"
+
+echo "[*] Docker Installation"
+echo "https://docs.docker.com/engine/install/ubuntu/"
