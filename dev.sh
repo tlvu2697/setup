@@ -51,6 +51,10 @@ echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
 sudo ln -s ~/.asdf/installs/ruby/3.0.2/bin/tmuxinator ~/.local/bin/muxinator
 
+echo "[*] Installing Alacritty..."
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt install -y alacritty
+
 echo "[*] Installing LazyGit..."
 MY_FLAVOR=Linux_x86_64; curl -s -L $(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep -i "$MY_FLAVOR") | sudo tar xzf - -C ~/.local/bin lazygit
 
@@ -65,7 +69,6 @@ echo "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-po
 
 echo "[*] Docker Installation"
 echo "https://docs.docker.com/engine/install/ubuntu/"
-
 
 # DEPRECATED
 echo "[*] Installing Git Cola"
