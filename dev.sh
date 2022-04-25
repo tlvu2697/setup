@@ -31,8 +31,8 @@ echo "[*] Installing Python..."
 asdf install python 2.7.18
 asdf install python 3.4.10
 asdf global python 3.4.10 2.7.18
-sudo ln -s ~/.asdf/shims/python3 ~/.local/bin/_python3.6
-sudo ln -s ~/.asdf/shims/python2 ~/.local/bin/_python2.7
+sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3.6
+sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
 
 echo "[*] Installing Ruby..."
 asdf install ruby 3.0.2
@@ -45,7 +45,7 @@ pip2 install neovim
 pip3 install neovim
 npm install -g neovim
 gem install neovim
-sudo ln -s ~/.asdf/shims/neovim-ruby-host ~/.local/bin/_neovim-ruby-host
+sudo ln -s ~/.asdf/shims/neovim-ruby-host /usr/bin/_neovim-ruby-host
 
 echo "[*] Installing Tmuxinator..."
 gem install tmuxinator
