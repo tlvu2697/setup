@@ -13,8 +13,8 @@ bash link.sh
 echo "[*] Setup gitignore_global..."
 git config --global core.excludesfile ~/.gitignore_global
 
-echo "[*] Installing hub..."
-sudo apt install hub
+echo "[*] Installing Github CLI..."
+sudo apt install gh
 
 echo "[*] Installing ASDF..."
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
