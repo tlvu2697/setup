@@ -27,3 +27,6 @@ sudo apt-get install ibus-bamboo
 env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 ibus restart
 echo "Please logout and login again"
+
+echo "[*] Install applications from snapcraft..."
+sudo snap install beekeeper-studio mailspring notion-snap postman slack spotify telegram-desktop

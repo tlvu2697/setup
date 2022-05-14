@@ -56,10 +56,13 @@ sudo add-apt-repository ppa:aslatter/ppa
 sudo apt install -y alacritty
 
 echo "[*] Installing LazyGit..."
-MY_FLAVOR=Linux_x86_64; curl -s -L $(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep -i "$MY_FLAVOR") | sudo tar xzf - -C ~/.local/bin lazygit
+curl https://raw.githubusercontent.com/tlvu2697/setup/master/apps/lazygit.sh | bash
 
 echo "[*] Installing LazyDocker..."
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+curl https://raw.githubusercontent.com/tlvu2697/setup/master/apps/lazydocker.sh | bash
+
+echo "[*] Installing Overmind..."
+curl https://raw.githubusercontent.com/tlvu2697/setup/master/apps/overmind.sh | bash
 
 echo "[*] Redis Installation"
 echo "https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04"
@@ -69,10 +72,3 @@ echo "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-po
 
 echo "[*] Docker Installation"
 echo "https://docs.docker.com/engine/install/ubuntu/"
-
-# DEPRECATED
-echo "[*] Installing Git Cola"
-git clone git://github.com/git-cola/git-cola.git ~/.git-cola
-pip install pyqt5
-sudo ln -s ~/.git-cola/bin/git-dag /usr/local/bin/git-dag
-sudo ln -s ~/.git-cola/bin/git-cola /usr/local/bin/git-cola

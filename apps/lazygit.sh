@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# MY_FLAVOR=Linux_x86_64; curl -s -L $(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep -i "$MY_FLAVOR") | sudo tar xzf - -C ~/.local/bin lazygit
+
 # allow specifying different destination directory
 DIR="${DIR:-"$HOME/.local/bin"}"
 
