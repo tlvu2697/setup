@@ -12,7 +12,7 @@ case $ARCH in
 esac
 
 # prepare the download URL
-GITHUB_LATEST_VERSION=$(curl -L -s -H 'Accept: application/json' https://github.com/DarthSim/overmind/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
+GITHUB_LATEST_VERSION=$(curl -sL -H 'Accept: application/json' https://github.com/DarthSim/overmind/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 GITHUB_FILE="overmind-${GITHUB_LATEST_VERSION}-$(uname -s | sed -e 's/\(.*\)/\L\1/')-${ARCH}.gz"
 GITHUB_URL="https://github.com/DarthSim/overmind/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
@@ -21,5 +21,5 @@ mkdir tmp
 curl -sL -o tmp/overmind.gz $GITHUB_URL
 gunzip tmp/overmind.gz
 install -Dm 755 tmp/overmind -t "$DIR"
-echo "overmind (${GITHUB_LATEST_VERSION})"
+echo "[*] overmind (${GITHUB_LATEST_VERSION})"
 rm -rf tmp
