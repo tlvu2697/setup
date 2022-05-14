@@ -18,9 +18,9 @@ GITHUB_FILE="lazydocker_${GITHUB_LATEST_VERSION//v/}_$(uname -s)_${ARCH}.tar.gz"
 GITHUB_URL="https://github.com/jesseduffield/lazydocker/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
 # install/update the local binary
-echo $GITHUB_LATEST_VERSION
 mkdir tmp
-curl -L -o tmp/lazydocker.tar.gz $GITHUB_URL
-tar xzvf tmp/lazydocker.tar.gz -C tmp lazydocker
+curl -sL -o tmp/lazydocker.tar.gz $GITHUB_URL
+tar xzvf tmp/lazydocker.tar.gz -C tmp lazydocker > /dev/null
 install -Dm 755 tmp/lazydocker -t "$DIR"
+echo "lazydocker (${GITHUB_LATEST_VERSION})"
 rm -rf tmp

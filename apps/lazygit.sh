@@ -20,9 +20,9 @@ GITHUB_FILE="lazygit_${GITHUB_LATEST_VERSION//v/}_$(uname -s)_${ARCH}.tar.gz"
 GITHUB_URL="https://github.com/jesseduffield/lazygit/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
 # install/update the local binary
-echo $GITHUB_LATEST_VERSION
 mkdir tmp
-curl -L -o tmp/lazygit.tar.gz $GITHUB_URL
-tar xzvf tmp/lazygit.tar.gz -C tmp lazygit
+curl -sL -o tmp/lazygit.tar.gz $GITHUB_URL
+tar xzvf tmp/lazygit.tar.gz -C tmp lazygit > /dev/null
 install -Dm 755 tmp/lazygit -t "$DIR"
+echo "lazygit (${GITHUB_LATEST_VERSION})"
 rm -rf tmp

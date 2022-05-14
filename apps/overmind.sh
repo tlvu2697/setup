@@ -17,9 +17,9 @@ GITHUB_FILE="overmind-${GITHUB_LATEST_VERSION}-$(uname -s | sed -e 's/\(.*\)/\L\
 GITHUB_URL="https://github.com/DarthSim/overmind/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
 # install/update the local binary
-echo $GITHUB_LATEST_VERSION
 mkdir tmp
-curl -L -o tmp/overmind.gz $GITHUB_URL
+curl -sL -o tmp/overmind.gz $GITHUB_URL
 gunzip tmp/overmind.gz
 install -Dm 755 tmp/overmind -t "$DIR"
+echo "overmind (${GITHUB_LATEST_VERSION})"
 rm -rf tmp
