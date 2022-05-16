@@ -13,14 +13,20 @@ case $ARCH in
 esac
 
 # prepare the download URL
+CURRENT_VERSION="v$(lazydocker --version | head -n 1 | sed -e 's/.*Version: \([^"]*\).*/\1/')"
 GITHUB_LATEST_VERSION=$(curl -sL -H 'Accept: application/json' https://github.com/jesseduffield/lazydocker/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 GITHUB_FILE="lazydocker_${GITHUB_LATEST_VERSION//v/}_$(uname -s)_${ARCH}.tar.gz"
 GITHUB_URL="https://github.com/jesseduffield/lazydocker/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
 # install/update the local binary
-mkdir tmp
-curl -sL -o tmp/lazydocker.tar.gz $GITHUB_URL
-tar xzvf tmp/lazydocker.tar.gz -C tmp lazydocker > /dev/null
-install -Dm 755 tmp/lazydocker -t "$DIR"
-echo "[*] lazydocker (${GITHUB_LATEST_VERSION})"
-rm -rf tmp
+if [ $CURRENT_VERSION != $GITHUB_LATEST_VERSION ]
+then
+  mkdir tmp
+  curl -sL -o tmp/lazydocker.tar.gz $GITHUB_URL
+  tar xzvf tmp/lazydocker.tar.gz -C tmp lazydocker > /dev/null
+  install -Dm 755 tmp/lazydocker -t "$DIR"
+  echo "[*] lazydocker (${CURRENT_VERSION} -> ${GITHUB_LATEST_VERSION})"
+  rm -rf tmp
+else
+  echo "[-] lazydocker (${CURRENT_VERSION} - latest)"
+fi

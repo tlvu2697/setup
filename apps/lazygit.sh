@@ -15,14 +15,20 @@ case $ARCH in
 esac
 
 # prepare the download URL
+CURRENT_VERSION="v$(lazygit -v | sed -e 's/.*version=\([^"]*\), os.*/\1/')"
 GITHUB_LATEST_VERSION=$(curl -sL -H 'Accept: application/json' https://github.com/jesseduffield/lazygit/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 GITHUB_FILE="lazygit_${GITHUB_LATEST_VERSION//v/}_$(uname -s)_${ARCH}.tar.gz"
 GITHUB_URL="https://github.com/jesseduffield/lazygit/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
 
 # install/update the local binary
-mkdir tmp
-curl -sL -o tmp/lazygit.tar.gz $GITHUB_URL
-tar xzvf tmp/lazygit.tar.gz -C tmp lazygit > /dev/null
-install -Dm 755 tmp/lazygit -t "$DIR"
-echo "[*] lazygit (${GITHUB_LATEST_VERSION})"
-rm -rf tmp
+if [ $CURRENT_VERSION != $GITHUB_LATEST_VERSION ]
+then
+  mkdir tmp
+  curl -sL -o tmp/lazygit.tar.gz $GITHUB_URL
+  tar xzvf tmp/lazygit.tar.gz -C tmp lazygit > /dev/null
+  install -Dm 755 tmp/lazygit -t "$DIR"
+  echo "[*] lazygit (${CURRENT_VERSION} -> ${GITHUB_LATEST_VERSION})"
+  rm -rf tmp
+else
+  echo "[-] lazygit (${CURRENT_VERSION} - latest)"
+fi
