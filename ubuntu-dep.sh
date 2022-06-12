@@ -18,7 +18,7 @@ echo "[*] Wireguard dependencies..."
 sudo apt install -y openresolv
 
 echo "[*] Init SSH key"
-ssh-keygen -t rsa -b 4096 -C "tlvu2697@gmail.com"
+ssh-keygen -t ed25519 -C "tlvu2697@gmail.com"
 
 echo "[*] Installing ibus..."
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
