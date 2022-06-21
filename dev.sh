@@ -28,11 +28,9 @@ asdf install nodejs 16.14.2
 asdf global nodejs 16.14.2
 
 echo "[*] Installing Python..."
-asdf install python 2.7.18
-asdf install python 3.4.10
-asdf global python 3.4.10 2.7.18
-sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3.6
-sudo ln -s ~/.asdf/shims/python2 /usr/local/bin/_python2.7
+asdf install python 3.10.5
+asdf global python 3.10.5 2.7.18
+sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3
 
 echo "[*] Installing Ruby..."
 asdf install ruby 3.0.2
@@ -41,7 +39,6 @@ asdf global ruby 3.0.2
 echo "[*] Installing Neovim..."
 sudo apt-get install -y neovim
 git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-pip2 install neovim
 pip3 install neovim
 npm install -g neovim
 gem install neovim
