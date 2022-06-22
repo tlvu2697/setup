@@ -3,7 +3,8 @@
 sudo apt update
 
 echo "[*] Installing system utils..."
-sudo apt install -y gnome-tweaks xclip exuberant-ctags build-essential wget curl git font-manager ripgrep tmux mlocate imwheel fzf
+sudo apt install -y gnome-tweaks xclip exuberant-ctags build-essential wget curl git font-manager ripgrep tmux mlocate imwheel fzf fd-find
+ln -s $(which fdfind) $HOME/.local/bin/fd
 
 echo "[*] Ruby dependencies..."
 sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
