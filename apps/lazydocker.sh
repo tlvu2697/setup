@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/jesseduffield/lazydocker
 
 # allow specifying different destination directory
 DIR="${DIR:-"$HOME/.local/bin"}"

@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/jesseduffield/lazygit
 
 # MY_FLAVOR=Linux_x86_64; curl -s -L $(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep -i "$MY_FLAVOR") | sudo tar xzf - -C ~/.local/bin lazygit
 
@@ -8,10 +9,7 @@ DIR="${DIR:-"$HOME/.local/bin"}"
 # map different architecture variations to the available binaries
 ARCH=$(uname -m)
 case $ARCH in
-    i386|i686) ARCH=x86 ;;
-    armv6*) ARCH=armv6 ;;
-    armv7*) ARCH=armv7 ;;
-    aarch64*) ARCH=arm64 ;;
+    x86_64*) ARCH=x86_64 ;;
 esac
 
 # prepare the download URL

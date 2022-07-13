@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/DarthSim/overmind
 
 # allow specifying different destination directory
 DIR="${DIR:-"$HOME/.local/bin"}"
@@ -6,9 +7,7 @@ DIR="${DIR:-"$HOME/.local/bin"}"
 # map different architecture variations to the available binaries
 ARCH=$(uname -m)
 case $ARCH in
-    i386|i686) ARCH=386 ;;
     x86_64*) ARCH=amd64 ;;
-    aarch64*) ARCH=arm64 ;;
 esac
 
 # prepare the download URL
