@@ -29,7 +29,7 @@ asdf global nodejs 16.14.2
 
 echo "[*] Installing Python..."
 asdf install python 3.10.5
-asdf global python 3.10.5 2.7.18
+asdf global python 3.10.5
 sudo ln -s ~/.asdf/shims/python3 /usr/local/bin/_python3
 
 echo "[*] Installing Ruby..."
