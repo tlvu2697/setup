@@ -3,7 +3,7 @@
 sudo apt update
 
 echo "[*] Installing system utils..."
-sudo apt install -y gnome-tweaks xclip exuberant-ctags build-essential wget curl git font-manager ripgrep tmux mlocate imwheel fzf fd-find
+sudo apt install -y gnome-tweaks xclip exuberant-ctags build-essential wget curl git font-manager ripgrep tmux mlocate imwheel fzf fd-find baobab
 ln -s $(which fdfind) $HOME/.local/bin/fd
 
 echo "[*] Ruby dependencies..."
