@@ -11,7 +11,12 @@ case $ARCH in
 esac
 
 # prepare the download URL
-CURRENT_VERSION="v$(overmind -v | sed -e 's/.*version \([^"]*\).*/\1/')"
+if ! command -v overmind &> /dev/null
+then
+  CURRENT_VERSION="none"
+else
+  CURRENT_VERSION="v$(overmind -v | sed -e 's/.*version \([^"]*\).*/\1/')"
+fi
 GITHUB_LATEST_VERSION=$(curl -sL -H 'Accept: application/json' https://github.com/DarthSim/overmind/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 GITHUB_FILE="overmind-${GITHUB_LATEST_VERSION}-$(uname -s | sed -e 's/\(.*\)/\L\1/')-${ARCH}.gz"
 GITHUB_URL="https://github.com/DarthSim/overmind/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"

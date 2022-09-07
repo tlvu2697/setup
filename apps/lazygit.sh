@@ -13,7 +13,12 @@ case $ARCH in
 esac
 
 # prepare the download URL
-CURRENT_VERSION="v$(lazygit -v | sed -e 's/.*version=\([^"]*\), os.*/\1/')"
+if ! command -v lazygit &> /dev/null
+then
+  CURRENT_VERSION="none"
+else
+  CURRENT_VERSION="v$(lazygit -v | sed -e 's/.*version=\([^"]*\), os.*/\1/')"
+fi
 GITHUB_LATEST_VERSION=$(curl -sL -H 'Accept: application/json' https://github.com/jesseduffield/lazygit/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 GITHUB_FILE="lazygit_${GITHUB_LATEST_VERSION//v/}_$(uname -s)_${ARCH}.tar.gz"
 GITHUB_URL="https://github.com/jesseduffield/lazygit/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
