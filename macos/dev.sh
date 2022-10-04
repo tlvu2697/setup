@@ -47,4 +47,4 @@ gem install tmuxinator
 sudo ln -s ~/.asdf/installs/ruby/3.1.2/bin/tmuxinator ~/.local/bin/muxinator
 
 echo "[*] Installing Alacritty..."
-brew install --cask alacritty
+brew install --cask alacritty --no-quarantine
