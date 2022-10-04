@@ -8,3 +8,6 @@ brew install xclip ctags wget curl git ripgrep tmux fzf fd
 
 echo "[*] Installing apps..."
 brew install --cask beekeeper-studio mailspring notion postman slack spotify telegram
+
+echo "[*] Installing Pure Theme..."
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
