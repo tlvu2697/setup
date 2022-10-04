@@ -31,3 +31,6 @@ echo "Please logout and login again"
 
 echo "[*] Install applications from snapcraft..."
 sudo snap install beekeeper-studio mailspring notion-snap postman slack spotify telegram-desktop
+
+echo "[*] Install Pure Theme"
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
