@@ -34,3 +34,7 @@ sudo snap install beekeeper-studio mailspring notion-snap postman slack spotify 
 
 echo "[*] Install Pure Theme"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+
+echo "[*] Install Bat"
+sudo apt install bat
+ln -s /usr/bin/batcat $HOME/.local/bin/bat
