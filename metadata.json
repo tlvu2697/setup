@@ -1,5 +1,5 @@
 {
-  "filter_params": [
+  "filter_parameters": [
     "password",
     "password_confirmation",
     "tax_file_number",
